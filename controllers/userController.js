@@ -86,7 +86,6 @@ const registerUser = async (req, res) => {
 
     // Responder con éxito y el token generado
     res.json({ success: true, message: "Usuario agregado" })
-    res.json({ success: true, message: token })
     console.log("Usuario creado exitosamente")
   } catch (error) {
     console.log(error);
