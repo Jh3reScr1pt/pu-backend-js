@@ -1,6 +1,6 @@
 import userModel from "../models/userModel.js"
 
-// add to user cart  
+// Agregar articulo al carrito  
 const addToCart = async (req, res) => {
    try {
       let userData = await userModel.findOne({_id:req.body.userId});
@@ -19,7 +19,7 @@ const addToCart = async (req, res) => {
    }
 }
 
-// remove food from user cart
+// Elimina articulo del carrito
 const removeFromCart = async (req, res) => {
    try {
       let userData = await userModel.findById(req.body.userId);
@@ -36,7 +36,7 @@ const removeFromCart = async (req, res) => {
 
 }
 
-// get user cart
+// obtener datos del carrito
 const getCart = async (req, res) => {
    try {
       let userData = await userModel.findById(req.body.userId);
